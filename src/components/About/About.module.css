@@ -1,0 +1,205 @@
+.aboutSection {
+  background-color: var(--color-surface);
+  transition: background-color var(--transition-base);
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .aboutContent {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-16);
+  }
+}
+
+/* Visual Column & Avatar Card */
+.visualColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarCard {
+  width: 100%;
+  max-width: 340px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.avatarCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.avatarGraphic {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monogramCircle {
+  width: 110px;
+  height: 110px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.avatarImage {
+  width: 110px;
+  height: 110px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  border: 3px solid var(--color-surface);
+}
+
+.monogramLetter {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+}
+
+.avatarRing {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  border: 2px dashed var(--color-accent);
+  animation: rotateSlow 24s linear infinite;
+  opacity: 0.6;
+}
+
+.avatarCaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.captionName {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.captionRole {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Narrative Column */
+.narrativeColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.subHeading {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semi);
+  color: var(--color-text);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .subHeading {
+    font-size: var(--text-3xl);
+  }
+}
+
+.paragraph {
+  font-size: var(--text-base);
+  line-height: var(--leading-loose);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.paragraph strong {
+  color: var(--color-accent);
+  font-weight: var(--weight-semi);
+}
+
+.paragraph em {
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* Value Highlights Grid */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.highlightCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.highlightCard:hover {
+  border-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.highlightIcon {
+  color: var(--color-accent);
+  background-color: var(--color-surface);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlightText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.highlightTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semi);
+  color: var(--color-text);
+}
+
+.highlightDesc {
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--color-muted);
+}
