@@ -2,6 +2,10 @@
 
 A responsive developer portfolio featuring an introduction, skills, project case studies, and contact links.
 
+## Live Site
+
+[View Tanvi's portfolio](https://tanvi-portfolio-lovat.vercel.app)
+
 ## Built With
 
 - React and Vite
