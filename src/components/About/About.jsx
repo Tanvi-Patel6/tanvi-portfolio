@@ -40,27 +40,15 @@ export default function About() {
         />
 
         <div className={styles.aboutContent}>
-          {/* Left Column: Visual Portrait / Geometric Monogram */}
+          {/* Left Column: Profile portrait */}
           <div className={styles.visualColumn}>
             <div className={styles.avatarCard}>
               <div className={styles.avatarGraphic}>
-                {/* 
-                  To use your photo:
-                  1. Put your image in 'public/profile.jpg' (or .png)
-                  2. If the file exists, it displays your photo inside the circular frame.
-                  3. If no photo is found, it automatically falls back to your monogram.
-                */}
                 <img
-                  src="/profile.png"
+                  src="/IMG_0329.JPG.jpeg"
                   alt="Tanvi Patel"
                   className={styles.avatarImage}
                   onError={(e) => {
-                    // Fallback to /profile.jpg if /image.png fails
-                    if (!e.currentTarget.src.includes('profile.jpg')) {
-                      e.currentTarget.src = '/profile.jpg'
-                      return
-                    }
-                    // Hide image and show fallback if file not found
                     e.currentTarget.style.display = 'none'
                     const fallback = e.currentTarget.nextElementSibling
                     if (fallback) fallback.style.display = 'flex'
